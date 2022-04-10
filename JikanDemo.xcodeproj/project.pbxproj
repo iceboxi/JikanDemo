@@ -34,6 +34,13 @@
 		585FF0332802A26C00077BA9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0322802A26C00077BA9 /* R.generated.swift */; };
 		585FF0392802A3C300077BA9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 585FF0382802A3C300077BA9 /* Settings.bundle */; };
 		585FF03B2802A3F500077BA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585FF03A2802A3F500077BA9 /* GoogleService-Info.plist */; };
+		585FF0412802A4A300077BA9 /* TopManga.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FF03D2802A4A300077BA9 /* TopManga.json */; };
+		585FF0422802A4A300077BA9 /* TopAnime.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FF03E2802A4A300077BA9 /* TopAnime.json */; };
+		585FF0432802A4A300077BA9 /* EmptyArray.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FF03F2802A4A300077BA9 /* EmptyArray.json */; };
+		585FF0442802A4A300077BA9 /* EmptyObject.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FF0402802A4A300077BA9 /* EmptyObject.json */; };
+		585FF0462802A4AC00077BA9 /* JikanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0452802A4AC00077BA9 /* JikanAPI.swift */; };
+		585FF0482802A75A00077BA9 /* LibsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0472802A75A00077BA9 /* LibsManager.swift */; };
+		585FF04A2802A7E500077BA9 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0492802A7E500077BA9 /* LogManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +91,13 @@
 		585FF0322802A26C00077BA9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		585FF0382802A3C300077BA9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		585FF03A2802A3F500077BA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		585FF03D2802A4A300077BA9 /* TopManga.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TopManga.json; sourceTree = "<group>"; };
+		585FF03E2802A4A300077BA9 /* TopAnime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TopAnime.json; sourceTree = "<group>"; };
+		585FF03F2802A4A300077BA9 /* EmptyArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyArray.json; sourceTree = "<group>"; };
+		585FF0402802A4A300077BA9 /* EmptyObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyObject.json; sourceTree = "<group>"; };
+		585FF0452802A4AC00077BA9 /* JikanAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JikanAPI.swift; sourceTree = "<group>"; };
+		585FF0472802A75A00077BA9 /* LibsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsManager.swift; sourceTree = "<group>"; };
+		585FF0492802A7E500077BA9 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +205,8 @@
 		585FF00128029C2C00077BA9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				585FF0452802A4AC00077BA9 /* JikanAPI.swift */,
+				585FF03C2802A4A300077BA9 /* Stubbed */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -205,6 +221,8 @@
 		585FF00328029C3D00077BA9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				585FF0472802A75A00077BA9 /* LibsManager.swift */,
+				585FF0492802A7E500077BA9 /* LogManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -241,6 +259,17 @@
 				585FEFD628029BDE00077BA9 /* Main.storyboard */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		585FF03C2802A4A300077BA9 /* Stubbed */ = {
+			isa = PBXGroup;
+			children = (
+				585FF03D2802A4A300077BA9 /* TopManga.json */,
+				585FF03E2802A4A300077BA9 /* TopAnime.json */,
+				585FF03F2802A4A300077BA9 /* EmptyArray.json */,
+				585FF0402802A4A300077BA9 /* EmptyObject.json */,
+			);
+			path = Stubbed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,11 +411,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585FF0412802A4A300077BA9 /* TopManga.json in Resources */,
 				585FF0392802A3C300077BA9 /* Settings.bundle in Resources */,
 				585FEFDD28029BDF00077BA9 /* LaunchScreen.storyboard in Resources */,
 				585FF03B2802A3F500077BA9 /* GoogleService-Info.plist in Resources */,
 				585FEFDA28029BDF00077BA9 /* Assets.xcassets in Resources */,
+				585FF0432802A4A300077BA9 /* EmptyArray.json in Resources */,
+				585FF0442802A4A300077BA9 /* EmptyObject.json in Resources */,
 				585FEFD828029BDE00077BA9 /* Main.storyboard in Resources */,
+				585FF0422802A4A300077BA9 /* TopAnime.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +526,10 @@
 				585FEFD528029BDE00077BA9 /* MainController.swift in Sources */,
 				585FEFD128029BDE00077BA9 /* AppDelegate.swift in Sources */,
 				585FEFD328029BDE00077BA9 /* SceneDelegate.swift in Sources */,
+				585FF04A2802A7E500077BA9 /* LogManager.swift in Sources */,
+				585FF0482802A75A00077BA9 /* LibsManager.swift in Sources */,
 				585FF0332802A26C00077BA9 /* R.generated.swift in Sources */,
+				585FF0462802A4AC00077BA9 /* JikanAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
