@@ -1,0 +1,34 @@
+excluded:
+  - Docs
+  - Frameworks
+  - Generated
+  - Carthage
+  - Pods
+  - fastlane
+  - R.generated.swift
+
+identifier_name:
+  min_length: 1
+file_length:
+  warning: 500
+  error: 800
+  ignore_comment_only_lines: true
+type_body_length:
+  - 500 # warning
+  - 700 # error
+line_length:
+  warning: 200
+  error: 300
+large_tuple:
+  - 3
+  - 4
+force_cast: warning
+force_try:
+  severity: warning
+
+disabled_rules:
+  - trailing_whitespace
+
+opt_in_rules:
+  - empty_count
+  - anyobject_protocol

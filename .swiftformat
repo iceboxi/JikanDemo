@@ -1,0 +1,12 @@
+--exclude .build
+--exclude .swiftpm
+--disable unusedArguments
+--disable wrap
+--disable wrapArguments
+--disable wrapAttributes
+--disable yodaConditions
+--enable blankLinesBetweenImports
+--enable blockComments
+--enable isEmpty
+--enable markTypes
+--enable organizeDeclarations
