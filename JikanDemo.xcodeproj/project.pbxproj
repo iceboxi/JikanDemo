@@ -31,6 +31,9 @@
 		585FF02C2802A19100077BA9 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF02B2802A19100077BA9 /* RxDataSources */; };
 		585FF02F2802A1D700077BA9 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF02E2802A1D700077BA9 /* ObjectMapper */; };
 		585FF0302802A1E700077BA9 /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 585FF01D2802A06C00077BA9 /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		585FF0332802A26C00077BA9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0322802A26C00077BA9 /* R.generated.swift */; };
+		585FF0392802A3C300077BA9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 585FF0382802A3C300077BA9 /* Settings.bundle */; };
+		585FF03B2802A3F500077BA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585FF03A2802A3F500077BA9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		585FEFED28029BDF00077BA9 /* JikanDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JikanDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		585FEFF128029BDF00077BA9 /* JikanDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanDemoUITests.swift; sourceTree = "<group>"; };
 		585FEFF328029BDF00077BA9 /* JikanDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		585FF0322802A26C00077BA9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		585FF0382802A3C300077BA9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		585FF03A2802A3F500077BA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 		585FEFC428029BDE00077BA9 = {
 			isa = PBXGroup;
 			children = (
+				585FF0322802A26C00077BA9 /* R.generated.swift */,
 				585FEFCF28029BDE00077BA9 /* JikanDemo */,
 				585FEFE628029BDF00077BA9 /* JikanDemoTests */,
 				585FEFF028029BDF00077BA9 /* JikanDemoUITests */,
@@ -213,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				585FEFD928029BDF00077BA9 /* Assets.xcassets */,
+				585FF0382802A3C300077BA9 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 		585FF00628029C6600077BA9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				585FF03A2802A3F500077BA9 /* GoogleService-Info.plist */,
 				585FEFDE28029BDF00077BA9 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -241,10 +250,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 585FEFF728029BDF00077BA9 /* Build configuration list for PBXNativeTarget "JikanDemo" */;
 			buildPhases = (
+				585FF0342802A29700077BA9 /* Swiftlint */,
+				585FF0352802A2BB00077BA9 /* R.swift */,
 				585FEFC928029BDE00077BA9 /* Sources */,
 				585FEFCA28029BDE00077BA9 /* Frameworks */,
 				585FEFCB28029BDE00077BA9 /* Resources */,
 				585FF0312802A1E700077BA9 /* Embed Frameworks */,
+				585FF0362802A35200077BA9 /* FirebaseCrashlytics */,
+				585FF0372802A38900077BA9 /* LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -369,7 +382,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585FF0392802A3C300077BA9 /* Settings.bundle in Resources */,
 				585FEFDD28029BDF00077BA9 /* LaunchScreen.storyboard in Resources */,
+				585FF03B2802A3F500077BA9 /* GoogleService-Info.plist in Resources */,
 				585FEFDA28029BDF00077BA9 /* Assets.xcassets in Resources */,
 				585FEFD828029BDE00077BA9 /* Main.storyboard in Resources */,
 			);
@@ -391,6 +406,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		585FF0342802A29700077BA9 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif which mint >/dev/null; then\n    mint run swiftlint\nelse\n    echo \"warning: SwiftLint not installed, run bootstrap.sh or download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		585FF0352802A2BB00077BA9 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif mint list | grep -q 'R.swift'; then\n    mint run R.swift rswift generate \"$SRCROOT/R.generated.swift\"\nelse\n    echo \"error: R.swift not installed; run 'mint bootstrap' to install\"\n    return -1\nfi\n";
+		};
+		585FF0362802A35200077BA9 /* FirebaseCrashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = FirebaseCrashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\n${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
+		};
+		585FF0372802A38900077BA9 /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif which mint >/dev/null; then\n    mint run mono0926/LicensePlist --output-path \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Settings.bundle\"\nelse\n    echo \"warning: LicensePlist not installed, run bootstrap.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		585FEFC928029BDE00077BA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -399,6 +493,7 @@
 				585FEFD528029BDE00077BA9 /* MainController.swift in Sources */,
 				585FEFD128029BDE00077BA9 /* AppDelegate.swift in Sources */,
 				585FEFD328029BDE00077BA9 /* SceneDelegate.swift in Sources */,
+				585FF0332802A26C00077BA9 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
