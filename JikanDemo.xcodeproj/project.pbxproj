@@ -16,6 +16,21 @@
 		585FEFE828029BDF00077BA9 /* JikanDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FEFE728029BDF00077BA9 /* JikanDemoTests.swift */; };
 		585FEFF228029BDF00077BA9 /* JikanDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FEFF128029BDF00077BA9 /* JikanDemoUITests.swift */; };
 		585FEFF428029BDF00077BA9 /* JikanDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FEFF328029BDF00077BA9 /* JikanDemoUITestsLaunchTests.swift */; };
+		585FF00A28029F6400077BA9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF00928029F6400077BA9 /* RxCocoa */; };
+		585FF00C28029F6400077BA9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF00B28029F6400077BA9 /* RxSwift */; };
+		585FF00F28029F9200077BA9 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF00E28029F9200077BA9 /* Rswift */; };
+		585FF01228029FEF00077BA9 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF01128029FEF00077BA9 /* CocoaLumberjackSwift */; };
+		585FF0152802A02D00077BA9 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0142802A02D00077BA9 /* RxMoya */; };
+		585FF0182802A04600077BA9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0172802A04600077BA9 /* SnapKit */; };
+		585FF01B2802A05900077BA9 /* NSObject-Rx in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF01A2802A05900077BA9 /* NSObject-Rx */; };
+		585FF01E2802A06C00077BA9 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF01D2802A06C00077BA9 /* Hero */; };
+		585FF0212802A08B00077BA9 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0202802A08B00077BA9 /* RxGesture */; };
+		585FF0242802A0AE00077BA9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0232802A0AE00077BA9 /* IQKeyboardManagerSwift */; };
+		585FF0272802A14F00077BA9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0262802A14F00077BA9 /* FirebaseAnalytics */; };
+		585FF0292802A14F00077BA9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0282802A14F00077BA9 /* FirebaseCrashlytics */; };
+		585FF02C2802A19100077BA9 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF02B2802A19100077BA9 /* RxDataSources */; };
+		585FF02F2802A1D700077BA9 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF02E2802A1D700077BA9 /* ObjectMapper */; };
+		585FF0302802A1E700077BA9 /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 585FF01D2802A06C00077BA9 /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,20 @@
 			remoteInfo = JikanDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		585FF0312802A1E700077BA9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				585FF0302802A1E700077BA9 /* Hero in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		585FEFCD28029BDE00077BA9 /* JikanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JikanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +85,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585FF0152802A02D00077BA9 /* RxMoya in Frameworks */,
+				585FF02C2802A19100077BA9 /* RxDataSources in Frameworks */,
+				585FF0212802A08B00077BA9 /* RxGesture in Frameworks */,
+				585FF00F28029F9200077BA9 /* Rswift in Frameworks */,
+				585FF01E2802A06C00077BA9 /* Hero in Frameworks */,
+				585FF00C28029F6400077BA9 /* RxSwift in Frameworks */,
+				585FF0242802A0AE00077BA9 /* IQKeyboardManagerSwift in Frameworks */,
+				585FF0272802A14F00077BA9 /* FirebaseAnalytics in Frameworks */,
+				585FF02F2802A1D700077BA9 /* ObjectMapper in Frameworks */,
+				585FF0182802A04600077BA9 /* SnapKit in Frameworks */,
+				585FF01228029FEF00077BA9 /* CocoaLumberjackSwift in Frameworks */,
+				585FF0292802A14F00077BA9 /* FirebaseCrashlytics in Frameworks */,
+				585FF01B2802A05900077BA9 /* NSObject-Rx in Frameworks */,
+				585FF00A28029F6400077BA9 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,12 +244,29 @@
 				585FEFC928029BDE00077BA9 /* Sources */,
 				585FEFCA28029BDE00077BA9 /* Frameworks */,
 				585FEFCB28029BDE00077BA9 /* Resources */,
+				585FF0312802A1E700077BA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JikanDemo;
+			packageProductDependencies = (
+				585FF00928029F6400077BA9 /* RxCocoa */,
+				585FF00B28029F6400077BA9 /* RxSwift */,
+				585FF00E28029F9200077BA9 /* Rswift */,
+				585FF01128029FEF00077BA9 /* CocoaLumberjackSwift */,
+				585FF0142802A02D00077BA9 /* RxMoya */,
+				585FF0172802A04600077BA9 /* SnapKit */,
+				585FF01A2802A05900077BA9 /* NSObject-Rx */,
+				585FF01D2802A06C00077BA9 /* Hero */,
+				585FF0202802A08B00077BA9 /* RxGesture */,
+				585FF0232802A0AE00077BA9 /* IQKeyboardManagerSwift */,
+				585FF0262802A14F00077BA9 /* FirebaseAnalytics */,
+				585FF0282802A14F00077BA9 /* FirebaseCrashlytics */,
+				585FF02B2802A19100077BA9 /* RxDataSources */,
+				585FF02E2802A1D700077BA9 /* ObjectMapper */,
+			);
 			productName = JikanDemo;
 			productReference = 585FEFCD28029BDE00077BA9 /* JikanDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +339,20 @@
 				Base,
 			);
 			mainGroup = 585FEFC428029BDE00077BA9;
+			packageReferences = (
+				585FF00828029F6400077BA9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				585FF00D28029F9200077BA9 /* XCRemoteSwiftPackageReference "R.swift" */,
+				585FF01028029FEF00077BA9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				585FF0132802A02D00077BA9 /* XCRemoteSwiftPackageReference "Moya" */,
+				585FF0162802A04600077BA9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				585FF0192802A05800077BA9 /* XCRemoteSwiftPackageReference "NSObject-Rx" */,
+				585FF01C2802A06C00077BA9 /* XCRemoteSwiftPackageReference "Hero" */,
+				585FF01F2802A08B00077BA9 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				585FF0222802A0AE00077BA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				585FF0252802A14F00077BA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				585FF02A2802A19100077BA9 /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				585FF02D2802A1D700077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+			);
 			productRefGroup = 585FEFCE28029BDE00077BA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -668,6 +742,178 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		585FF00828029F6400077BA9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		585FF00D28029F9200077BA9 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		585FF01028029FEF00077BA9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.0;
+			};
+		};
+		585FF0132802A02D00077BA9 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		585FF0162802A04600077BA9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		585FF0192802A05800077BA9 /* XCRemoteSwiftPackageReference "NSObject-Rx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/NSObject-Rx";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		585FF01C2802A06C00077BA9 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+		585FF01F2802A08B00077BA9 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		585FF0222802A0AE00077BA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		585FF0252802A14F00077BA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.0;
+			};
+		};
+		585FF02A2802A19100077BA9 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		585FF02D2802A1D700077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		585FF00928029F6400077BA9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF00828029F6400077BA9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		585FF00B28029F6400077BA9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF00828029F6400077BA9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		585FF00E28029F9200077BA9 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF00D28029F9200077BA9 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+		585FF01128029FEF00077BA9 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF01028029FEF00077BA9 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		585FF0142802A02D00077BA9 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF0132802A02D00077BA9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		585FF0172802A04600077BA9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF0162802A04600077BA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		585FF01A2802A05900077BA9 /* NSObject-Rx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF0192802A05800077BA9 /* XCRemoteSwiftPackageReference "NSObject-Rx" */;
+			productName = "NSObject-Rx";
+		};
+		585FF01D2802A06C00077BA9 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF01C2802A06C00077BA9 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
+		};
+		585FF0202802A08B00077BA9 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF01F2802A08B00077BA9 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+		585FF0232802A0AE00077BA9 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF0222802A0AE00077BA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		585FF0262802A14F00077BA9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF0252802A14F00077BA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		585FF0282802A14F00077BA9 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF0252802A14F00077BA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		585FF02B2802A19100077BA9 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF02A2802A19100077BA9 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		585FF02E2802A1D700077BA9 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 585FF02D2802A1D700077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 585FEFC528029BDE00077BA9 /* Project object */;
 }
