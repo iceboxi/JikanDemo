@@ -52,7 +52,6 @@
 		588445422803FAB300325D32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445412803FAB300325D32 /* MainViewModel.swift */; };
 		588445442803FB3F00325D32 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445432803FB3F00325D32 /* ViewModelType.swift */; };
 		588445462803FBB000325D32 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445452803FBB000325D32 /* TableViewCellViewModel.swift */; };
-		5884454928043C5A00325D32 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5884454828043C5A00325D32 /* ActivityIndicator.swift */; };
 		5884454C2804459300325D32 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5884454B2804459300325D32 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +120,6 @@
 		588445412803FAB300325D32 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		588445432803FB3F00325D32 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		588445452803FBB000325D32 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
-		5884454828043C5A00325D32 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		5884454B2804459300325D32 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,7 +257,6 @@
 		585FF00428029C4500077BA9 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				5884454728043C5A00325D32 /* RxActivityIndicator */,
 				585FF0592802B82F00077BA9 /* Moya-ObjectMapper */,
 			);
 			path = "Third Party";
@@ -293,7 +290,6 @@
 				5884453A280345C400325D32 /* TableViewCell.swift */,
 				5884453B280345C400325D32 /* TableViewCell.xib */,
 				5884454B2804459300325D32 /* WebViewController.swift */,
-				5884454A2804442100325D32 /* MainViewController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -333,21 +329,6 @@
 				585FF05E2802B82F00077BA9 /* Single+ObjectMapper.swift */,
 			);
 			path = RxSwift;
-			sourceTree = "<group>";
-		};
-		5884454728043C5A00325D32 /* RxActivityIndicator */ = {
-			isa = PBXGroup;
-			children = (
-				5884454828043C5A00325D32 /* ActivityIndicator.swift */,
-			);
-			path = RxActivityIndicator;
-			sourceTree = "<group>";
-		};
-		5884454A2804442100325D32 /* MainViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,7 +602,6 @@
 				585FF0612802B82F00077BA9 /* Single+ObjectMapper.swift in Sources */,
 				585FF04C2802AC7500077BA9 /* AnimeModel.swift in Sources */,
 				585FF0462802A4AC00077BA9 /* JikanAPI.swift in Sources */,
-				5884454928043C5A00325D32 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,6 @@ class MainController: UIViewController {
         
         makeUI()
         bindViewModel()
-        view.backgroundColor = .gray
     }
 
     func makeUI() {

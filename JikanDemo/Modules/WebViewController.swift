@@ -18,7 +18,6 @@ class WebViewController: UIViewController {
 
         makeUI()
         bindViewModel()
-        view.backgroundColor = .gray
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +35,7 @@ class WebViewController: UIViewController {
         view.addSubview(webView)
         
         webView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
     

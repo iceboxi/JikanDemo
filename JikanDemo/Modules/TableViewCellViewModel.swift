@@ -17,6 +17,7 @@ class TableViewCellViewModel: NSObject {
     let rank = BehaviorRelay<String>(value: "")
     
     let id: Int
+    let type: String
     
     init(with anime: Anime) {
         title.accept(anime.title)
@@ -25,6 +26,7 @@ class TableViewCellViewModel: NSObject {
         date.accept("\(anime.startDate)-\(anime.endDate)")
         
         id = anime.id
+        type = "anime"
     }
     
     init(with manga: Manga) {
@@ -34,5 +36,6 @@ class TableViewCellViewModel: NSObject {
         date.accept("\(manga.startDate)-\(manga.endDate)")
         
         id = manga.id
+        type = "manga"
     }
 }

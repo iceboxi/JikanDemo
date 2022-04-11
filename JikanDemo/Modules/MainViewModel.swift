@@ -46,10 +46,9 @@ class MainViewModel: NSObject, ViewModelType {
             .disposed(by: rx.disposeBag)
         
         input.selection.asObservable()
-            .map { $0.id }
-            .subscribe(onNext: { id in
-                let path = title.value == "Top Anime" ? "anime" : "manga"
-                self.malSelected.onNext(URL(string: "https://myanimelist.net/\(path)/\(id)")!)
+            .map { ($0.type, $0.id) }
+            .subscribe(onNext: { type, id in
+                self.malSelected.onNext(URL(string: "https://myanimelist.net/\(type)/\(id)")!)
             })
             .disposed(by: rx.disposeBag)
 
