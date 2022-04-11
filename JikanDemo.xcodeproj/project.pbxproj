@@ -29,7 +29,6 @@
 		585FF0272802A14F00077BA9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0262802A14F00077BA9 /* FirebaseAnalytics */; };
 		585FF0292802A14F00077BA9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0282802A14F00077BA9 /* FirebaseCrashlytics */; };
 		585FF02C2802A19100077BA9 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF02B2802A19100077BA9 /* RxDataSources */; };
-		585FF02F2802A1D700077BA9 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF02E2802A1D700077BA9 /* ObjectMapper */; };
 		585FF0302802A1E700077BA9 /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 585FF01D2802A06C00077BA9 /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		585FF0332802A26C00077BA9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0322802A26C00077BA9 /* R.generated.swift */; };
 		585FF0392802A3C300077BA9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 585FF0382802A3C300077BA9 /* Settings.bundle */; };
@@ -41,6 +40,16 @@
 		585FF0462802A4AC00077BA9 /* JikanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0452802A4AC00077BA9 /* JikanAPI.swift */; };
 		585FF0482802A75A00077BA9 /* LibsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0472802A75A00077BA9 /* LibsManager.swift */; };
 		585FF04A2802A7E500077BA9 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF0492802A7E500077BA9 /* LogManager.swift */; };
+		585FF04C2802AC7500077BA9 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF04B2802AC7500077BA9 /* AnimeModel.swift */; };
+		585FF0582802B79600077BA9 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 585FF0572802B79600077BA9 /* ObjectMapper */; };
+		585FF05F2802B82F00077BA9 /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF05B2802B82F00077BA9 /* Response+ObjectMapper.swift */; };
+		585FF0602802B82F00077BA9 /* ObservableType+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF05D2802B82F00077BA9 /* ObservableType+ObjectMapper.swift */; };
+		585FF0612802B82F00077BA9 /* Single+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF05E2802B82F00077BA9 /* Single+ObjectMapper.swift */; };
+		585FF06328033D4400077BA9 /* MangaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF06228033D4400077BA9 /* MangaModel.swift */; };
+		5884453C280345C400325D32 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5884453A280345C400325D32 /* TableViewCell.swift */; };
+		5884453D280345C400325D32 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5884453B280345C400325D32 /* TableViewCell.xib */; };
+		588445402803D58C00325D32 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5884453F2803D58C00325D32 /* Kingfisher */; };
+		588445422803FAB300325D32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445412803FAB300325D32 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +107,14 @@
 		585FF0452802A4AC00077BA9 /* JikanAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JikanAPI.swift; sourceTree = "<group>"; };
 		585FF0472802A75A00077BA9 /* LibsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsManager.swift; sourceTree = "<group>"; };
 		585FF0492802A7E500077BA9 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		585FF04B2802AC7500077BA9 /* AnimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
+		585FF05B2802B82F00077BA9 /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
+		585FF05D2802B82F00077BA9 /* ObservableType+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+ObjectMapper.swift"; sourceTree = "<group>"; };
+		585FF05E2802B82F00077BA9 /* Single+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+ObjectMapper.swift"; sourceTree = "<group>"; };
+		585FF06228033D4400077BA9 /* MangaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaModel.swift; sourceTree = "<group>"; };
+		5884453A280345C400325D32 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		5884453B280345C400325D32 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		588445412803FAB300325D32 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +128,10 @@
 				585FF00F28029F9200077BA9 /* Rswift in Frameworks */,
 				585FF01E2802A06C00077BA9 /* Hero in Frameworks */,
 				585FF00C28029F6400077BA9 /* RxSwift in Frameworks */,
+				585FF0582802B79600077BA9 /* ObjectMapper in Frameworks */,
 				585FF0242802A0AE00077BA9 /* IQKeyboardManagerSwift in Frameworks */,
 				585FF0272802A14F00077BA9 /* FirebaseAnalytics in Frameworks */,
-				585FF02F2802A1D700077BA9 /* ObjectMapper in Frameworks */,
+				588445402803D58C00325D32 /* Kingfisher in Frameworks */,
 				585FF0182802A04600077BA9 /* SnapKit in Frameworks */,
 				585FF01228029FEF00077BA9 /* CocoaLumberjackSwift in Frameworks */,
 				585FF0292802A14F00077BA9 /* FirebaseCrashlytics in Frameworks */,
@@ -214,6 +232,8 @@
 		585FF00228029C3600077BA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				585FF04B2802AC7500077BA9 /* AnimeModel.swift */,
+				585FF06228033D4400077BA9 /* MangaModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +250,7 @@
 		585FF00428029C4500077BA9 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				585FF0592802B82F00077BA9 /* Moya-ObjectMapper */,
 			);
 			path = "Third Party";
 			sourceTree = "<group>";
@@ -257,6 +278,9 @@
 			children = (
 				585FEFD428029BDE00077BA9 /* MainController.swift */,
 				585FEFD628029BDE00077BA9 /* Main.storyboard */,
+				588445412803FAB300325D32 /* MainViewModel.swift */,
+				5884453A280345C400325D32 /* TableViewCell.swift */,
+				5884453B280345C400325D32 /* TableViewCell.xib */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -270,6 +294,32 @@
 				585FF0402802A4A300077BA9 /* EmptyObject.json */,
 			);
 			path = Stubbed;
+			sourceTree = "<group>";
+		};
+		585FF0592802B82F00077BA9 /* Moya-ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				585FF05A2802B82F00077BA9 /* Core */,
+				585FF05C2802B82F00077BA9 /* RxSwift */,
+			);
+			path = "Moya-ObjectMapper";
+			sourceTree = "<group>";
+		};
+		585FF05A2802B82F00077BA9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				585FF05B2802B82F00077BA9 /* Response+ObjectMapper.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		585FF05C2802B82F00077BA9 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				585FF05D2802B82F00077BA9 /* ObservableType+ObjectMapper.swift */,
+				585FF05E2802B82F00077BA9 /* Single+ObjectMapper.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +357,8 @@
 				585FF0262802A14F00077BA9 /* FirebaseAnalytics */,
 				585FF0282802A14F00077BA9 /* FirebaseCrashlytics */,
 				585FF02B2802A19100077BA9 /* RxDataSources */,
-				585FF02E2802A1D700077BA9 /* ObjectMapper */,
+				585FF0572802B79600077BA9 /* ObjectMapper */,
+				5884453F2803D58C00325D32 /* Kingfisher */,
 			);
 			productName = JikanDemo;
 			productReference = 585FEFCD28029BDE00077BA9 /* JikanDemo.app */;
@@ -393,7 +444,8 @@
 				585FF0222802A0AE00077BA9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				585FF0252802A14F00077BA9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				585FF02A2802A19100077BA9 /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				585FF02D2802A1D700077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				585FF0562802B79600077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				5884453E2803D58B00325D32 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 585FEFCE28029BDE00077BA9 /* Products */;
 			projectDirPath = "";
@@ -412,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				585FF0412802A4A300077BA9 /* TopManga.json in Resources */,
+				5884453D280345C400325D32 /* TableViewCell.xib in Resources */,
 				585FF0392802A3C300077BA9 /* Settings.bundle in Resources */,
 				585FEFDD28029BDF00077BA9 /* LaunchScreen.storyboard in Resources */,
 				585FF03B2802A3F500077BA9 /* GoogleService-Info.plist in Resources */,
@@ -523,12 +576,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5884453C280345C400325D32 /* TableViewCell.swift in Sources */,
 				585FEFD528029BDE00077BA9 /* MainController.swift in Sources */,
 				585FEFD128029BDE00077BA9 /* AppDelegate.swift in Sources */,
+				585FF0602802B82F00077BA9 /* ObservableType+ObjectMapper.swift in Sources */,
+				585FF05F2802B82F00077BA9 /* Response+ObjectMapper.swift in Sources */,
 				585FEFD328029BDE00077BA9 /* SceneDelegate.swift in Sources */,
 				585FF04A2802A7E500077BA9 /* LogManager.swift in Sources */,
+				588445422803FAB300325D32 /* MainViewModel.swift in Sources */,
 				585FF0482802A75A00077BA9 /* LibsManager.swift in Sources */,
 				585FF0332802A26C00077BA9 /* R.generated.swift in Sources */,
+				585FF06328033D4400077BA9 /* MangaModel.swift in Sources */,
+				585FF0612802B82F00077BA9 /* Single+ObjectMapper.swift in Sources */,
+				585FF04C2802AC7500077BA9 /* AnimeModel.swift in Sources */,
 				585FF0462802A4AC00077BA9 /* JikanAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,12 +1023,20 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		585FF02D2802A1D700077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+		585FF0562802B79600077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.2.0;
+			};
+		};
+		5884453E2803D58B00325D32 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1039,10 +1107,15 @@
 			package = 585FF02A2802A19100077BA9 /* XCRemoteSwiftPackageReference "RxDataSources" */;
 			productName = RxDataSources;
 		};
-		585FF02E2802A1D700077BA9 /* ObjectMapper */ = {
+		585FF0572802B79600077BA9 /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 585FF02D2802A1D700077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			package = 585FF0562802B79600077BA9 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
 			productName = ObjectMapper;
+		};
+		5884453F2803D58C00325D32 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5884453E2803D58B00325D32 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
