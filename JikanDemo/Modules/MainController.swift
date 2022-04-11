@@ -53,7 +53,8 @@ class MainController: UIViewController {
     
     func bindViewModel() {
         let input = MainViewModel.Input(footerRefresh: Observable.just(()),
-                                        selection: segment.rx.selectedSegmentIndex.asDriver())
+                                        type: segment.rx.selectedSegmentIndex.asDriver(),
+                                        selection: tableView.rx.modelSelected(TableViewCellViewModel.self).asDriver())
         let output = viewModel.transform(input: input)
         
         output.items.asDriver(onErrorJustReturn: [])
@@ -65,6 +66,14 @@ class MainController: UIViewController {
         output.navigationTitle.drive(onNext: { [weak self] title in
             self?.title = title
         })
+            .disposed(by: rx.disposeBag)
+        
+        viewModel.malSelected
+            .subscribe(onNext: { [weak self] (url) in
+                let vc = WebViewController()
+                vc.url = url
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
             .disposed(by: rx.disposeBag)
     }
 }

@@ -14,7 +14,8 @@ import RxMoya
 class MainViewModel: NSObject, ViewModelType {
     struct Input {
         let footerRefresh: Observable<Void>
-        let selection: Driver<Int>
+        let type: Driver<Int>
+        let selection: Driver<TableViewCellViewModel>
     }
     
     struct Output {
@@ -23,6 +24,7 @@ class MainViewModel: NSObject, ViewModelType {
     }
     
     var page = 0
+    let malSelected = PublishSubject<URL>()
     
     let provider = MoyaProvider<JikanAPI>()
     
@@ -30,7 +32,7 @@ class MainViewModel: NSObject, ViewModelType {
         let elements = BehaviorRelay<[TableViewCellViewModel]>(value: [])
         let title = BehaviorRelay<String>(value: "")
         
-        input.selection.asObservable()
+        input.type.asObservable()
             .flatMapLatest { [weak self] index -> Observable<[TableViewCellViewModel]> in
                 guard let self = self else { return Observable.just([]) }
                 self.page = 0
@@ -41,6 +43,14 @@ class MainViewModel: NSObject, ViewModelType {
             .subscribe { list in
                 elements.accept(list)
             }
+            .disposed(by: rx.disposeBag)
+        
+        input.selection.asObservable()
+            .map { $0.id }
+            .subscribe(onNext: { id in
+                let path = title.value == "Top Anime" ? "anime" : "manga"
+                self.malSelected.onNext(URL(string: "https://myanimelist.net/\(path)/\(id)")!)
+            })
             .disposed(by: rx.disposeBag)
 
         return Output(navigationTitle: title.asDriver(), items: elements)

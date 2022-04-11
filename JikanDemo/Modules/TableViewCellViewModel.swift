@@ -16,11 +16,15 @@ class TableViewCellViewModel: NSObject {
     let date = BehaviorRelay<String>(value: "")
     let rank = BehaviorRelay<String>(value: "")
     
+    let id: Int
+    
     init(with anime: Anime) {
         title.accept(anime.title)
         iconURL.accept(anime.image)
         rank.accept(anime.rank != nil ? "\(anime.rank ?? 0)" : "-")
         date.accept("\(anime.startDate)-\(anime.endDate)")
+        
+        id = anime.id
     }
     
     init(with manga: Manga) {
@@ -28,5 +32,7 @@ class TableViewCellViewModel: NSObject {
         iconURL.accept(manga.image)
         rank.accept(manga.rank != nil ? "\(manga.rank ?? 0)" : "-")
         date.accept("\(manga.startDate)-\(manga.endDate)")
+        
+        id = manga.id
     }
 }
