@@ -28,8 +28,6 @@ class MainController: UIViewController {
         makeUI()
         bindViewModel()
         view.backgroundColor = .gray
-        
-
     }
 
     func makeUI() {
@@ -62,6 +60,11 @@ class MainController: UIViewController {
             .drive(tableView.rx.items(cellIdentifier: identify, cellType: TableViewCell.self)) { _, model, cell in
                 cell.bind(to: model)
             }
+            .disposed(by: rx.disposeBag)
+        
+        output.navigationTitle.drive(onNext: { [weak self] title in
+            self?.title = title
+        })
             .disposed(by: rx.disposeBag)
     }
 }

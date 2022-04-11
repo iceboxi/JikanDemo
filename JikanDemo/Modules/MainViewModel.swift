@@ -18,6 +18,7 @@ class MainViewModel: NSObject, ViewModelType {
     }
     
     struct Output {
+        let navigationTitle: Driver<String>
         let items: BehaviorRelay<[TableViewCellViewModel]>
     }
     
@@ -27,11 +28,13 @@ class MainViewModel: NSObject, ViewModelType {
     
     func transform(input: Input) -> Output {
         let elements = BehaviorRelay<[TableViewCellViewModel]>(value: [])
+        let title = BehaviorRelay<String>(value: "")
         
         input.selection.asObservable()
             .flatMapLatest { [weak self] index -> Observable<[TableViewCellViewModel]> in
                 guard let self = self else { return Observable.just([]) }
                 self.page = 0
+                title.accept(index == 0 ? "Top Anime" : "Top Manga")
                 elements.accept([])
                 return self.request(index)
             }
@@ -40,7 +43,7 @@ class MainViewModel: NSObject, ViewModelType {
             }
             .disposed(by: rx.disposeBag)
 
-        return Output(items: elements)
+        return Output(navigationTitle: title.asDriver(), items: elements)
     }
     
     func request(_ type: Int) -> Observable<[TableViewCellViewModel]> {
