@@ -13,6 +13,7 @@ class TableViewCell: UITableViewCell {
     let title = UILabel()
     let rank = UILabel()
     let date = UILabel()
+    let button = UIButton()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +48,12 @@ class TableViewCell: UITableViewCell {
             make.width.height.equalTo(50)
         }
         
+        contentView.addSubview(button)
+        button.snp.makeConstraints { make in
+            make.height.width.equalTo(30)
+            make.trailing.top.equalToSuperview()
+        }
+        
         updateUI()
     }
     
@@ -69,6 +76,11 @@ class TableViewCell: UITableViewCell {
             .disposed(by: rx.disposeBag)
         viewModel.date.asDriver()
             .drive(date.rx.text)
+            .disposed(by: rx.disposeBag)
+        viewModel.favorite.asDriver()
+            .drive(onNext: { [weak self] bool in
+                self?.button.setTitle(bool ? "❤️" : "🖤", for: .normal)
+            })
             .disposed(by: rx.disposeBag)
     }
 

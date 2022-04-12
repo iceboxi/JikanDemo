@@ -7,8 +7,6 @@
 
 import UIKit
 import RxSwift
-import Moya
-import RxMoya
 import NSObject_Rx
 import ObjectMapper
 import SnapKit
@@ -50,6 +48,15 @@ class MainController: UIViewController {
         }
         
         tableView.register(R.nib.tableViewCell)
+        
+        let favorite = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(showFavorite))
+        self.navigationItem.rightBarButtonItem = favorite
+    }
+    
+    @objc func showFavorite() {
+        let vc = FavoriteViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
     }
     
     func bindViewModel() {

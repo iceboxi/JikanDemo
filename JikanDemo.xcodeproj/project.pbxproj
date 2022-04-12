@@ -54,6 +54,8 @@
 		588445462803FBB000325D32 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445452803FBB000325D32 /* TableViewCellViewModel.swift */; };
 		5884454C2804459300325D32 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5884454B2804459300325D32 /* WebViewController.swift */; };
 		5884454E2804677100325D32 /* UserConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5884454D2804677100325D32 /* UserConfigs.swift */; };
+		588445532805565500325D32 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445522805565500325D32 /* FavoriteViewController.swift */; };
+		588445552805578D00325D32 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588445542805578D00325D32 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		588445452803FBB000325D32 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		5884454B2804459300325D32 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5884454D2804677100325D32 /* UserConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigs.swift; sourceTree = "<group>"; };
+		588445522805565500325D32 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		588445542805578D00325D32 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,8 @@
 				5884453A280345C400325D32 /* TableViewCell.swift */,
 				5884453B280345C400325D32 /* TableViewCell.xib */,
 				5884454B2804459300325D32 /* WebViewController.swift */,
+				588445542805578D00325D32 /* FavoriteViewModel.swift */,
+				588445522805565500325D32 /* FavoriteViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -602,9 +608,11 @@
 				588445442803FB3F00325D32 /* ViewModelType.swift in Sources */,
 				585FF0482802A75A00077BA9 /* LibsManager.swift in Sources */,
 				585FF0332802A26C00077BA9 /* R.generated.swift in Sources */,
+				588445532805565500325D32 /* FavoriteViewController.swift in Sources */,
 				585FF06328033D4400077BA9 /* MangaModel.swift in Sources */,
 				585FF0612802B82F00077BA9 /* Single+ObjectMapper.swift in Sources */,
 				585FF04C2802AC7500077BA9 /* AnimeModel.swift in Sources */,
+				588445552805578D00325D32 /* FavoriteViewModel.swift in Sources */,
 				585FF0462802A4AC00077BA9 /* JikanAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

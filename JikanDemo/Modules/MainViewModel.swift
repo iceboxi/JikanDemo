@@ -46,9 +46,18 @@ class MainViewModel: NSObject, ViewModelType {
             .disposed(by: rx.disposeBag)
         
         input.selection.asObservable()
-            .map { ($0.type, $0.id) }
-            .subscribe(onNext: { type, id in
-                self.malSelected.onNext(URL(string: "https://myanimelist.net/\(type)/\(id)")!)
+            .map { $0.item }
+            .subscribe(onNext: { model in
+                var list = UserConfigs.shared.favorates.value
+                if list.contains(where: { $0.id == model.id }) {
+                    list.removeAll(where: { $0.id == model.id })
+                } else {
+                    list.append(model)
+                }
+                
+                UserConfigs.shared.favorates.accept(list)
+                
+                self.malSelected.onNext(URL(string: "https://myanimelist.net/\(model.type)/\(model.id)")!)
             })
             .disposed(by: rx.disposeBag)
 
@@ -69,8 +78,10 @@ class MainViewModel: NSObject, ViewModelType {
             .filterSuccessfulStatusCodes()
             .mapObject(AnimeList.self)
             .map({ list in
-                list.data.map { item in
-                    let viewModel = TableViewCellViewModel(with: item)
+                let favorite = UserConfigs.shared.favorates.value
+                return list.data.map { item in
+                    let isFavorite = favorite.contains(where: { item.id == $0.id })
+                    let viewModel = TableViewCellViewModel(with: item, isFavorite: isFavorite)
                     return viewModel
                 }
             })
@@ -82,8 +93,10 @@ class MainViewModel: NSObject, ViewModelType {
             .asObservable()
             .mapObject(MangaList.self)
             .map({ list in
-                list.data.map { item in
-                    let viewModel = TableViewCellViewModel(with: item)
+                let favorite = UserConfigs.shared.favorates.value
+                return list.data.map { item in
+                    let isFavorite = favorite.contains(where: { item.id == $0.id })
+                    let viewModel = TableViewCellViewModel(with: item, isFavorite: isFavorite)
                     return viewModel
                 }
             })

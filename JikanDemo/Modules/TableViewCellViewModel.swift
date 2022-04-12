@@ -15,27 +15,29 @@ class TableViewCellViewModel: NSObject {
     let iconURL = BehaviorRelay<URL?>(value: nil)
     let date = BehaviorRelay<String>(value: "")
     let rank = BehaviorRelay<String>(value: "")
+    let favorite = BehaviorRelay<Bool>(value: false)
     
-    let id: Int
-    let type: String
+    var item: MalModel
     
-    init(with anime: Anime) {
+    init(with anime: MalModel, isFavorite: Bool) {
+        item = anime
+        item.favorite = isFavorite
+        
+        super.init()
+        
         title.accept(anime.title)
         iconURL.accept(anime.image)
         rank.accept(anime.rank != nil ? "\(anime.rank ?? 0)" : "-")
         date.accept("\(anime.startDate)-\(anime.endDate)")
+        favorite.accept(isFavorite)
         
-        id = anime.id
-        type = "anime"
-    }
-    
-    init(with manga: Manga) {
-        title.accept(manga.title)
-        iconURL.accept(manga.image)
-        rank.accept(manga.rank != nil ? "\(manga.rank ?? 0)" : "-")
-        date.accept("\(manga.startDate)-\(manga.endDate)")
-        
-        id = manga.id
-        type = "manga"
+        UserConfigs.shared.favorates.asDriver()
+            .drive(onNext: { [weak self] list in
+                guard let self = self else { return }
+                let bool = list.contains(where: { $0.id == self.item.id })
+                self.favorite.accept(bool)
+                self.item.favorite = bool
+            })
+            .disposed(by: rx.disposeBag)
     }
 }

@@ -19,6 +19,7 @@ class LibsManager: NSObject {
     private override init() {
         super.init()
 
+        _ = UserConfigs.shared
     }
 
     func setupLibs() {
