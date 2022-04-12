@@ -20,10 +20,20 @@ class JikanDemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testGetTopManga() throws {
         let provider = MoyaProvider<JikanAPI>(stubClosure: MoyaProvider.immediatelyStub)
-        provider.rx.request(.getTopManga(page: 0))
+        provider.rx.request(.getTopManga(page: 1))
             .mapObject(MangaList.self)
+            .subscribe(onSuccess: { list in
+                XCTAssertEqual(list.data.count, 25)
+            })
+            .disposed(by: rx.disposeBag)
+    }
+    
+    func testGetTopAnime() throws {
+        let provider = MoyaProvider<JikanAPI>(stubClosure: MoyaProvider.immediatelyStub)
+        provider.rx.request(.getTopAnime(page: 1))
+            .mapObject(AnimeList.self)
             .subscribe(onSuccess: { list in
                 XCTAssertEqual(list.data.count, 25)
             })
