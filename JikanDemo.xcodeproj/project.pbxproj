@@ -571,7 +571,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif mint list | grep -q 'R.swift'; then\n    mint run R.swift rswift generate \"$SRCROOT/R.generated.swift\"\nelse\n    echo \"error: R.swift not installed; run 'mint bootstrap' to install\"\n    return -1\nfi\n";
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif mint list | grep -q 'R.swift'; then\n    mint run R.swift rswift generate \"$SRCROOT/R.generated.swift\"\nelse\n    echo \"error: R.swift not installed; run 'mint bootstrap' to install\"\nfi\n";
 		};
 		585FF0362802A35200077BA9 /* FirebaseCrashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
