@@ -82,6 +82,21 @@ class TableViewCell: UITableViewCell {
                 self?.button.setTitle(bool ? "❤️" : "🖤", for: .normal)
             })
             .disposed(by: rx.disposeBag)
+        
+        button.rx.tap.asDriver()
+            .drive(onNext: {
+                let model = viewModel.item
+                
+                var list = UserConfigs.shared.favorates.value
+                if list.contains(where: { $0.id == model.id }) {
+                    list.removeAll(where: { $0.id == model.id })
+                } else {
+                    list.append(model)
+                }
+                
+                UserConfigs.shared.favorates.accept(list)
+            })
+            .disposed(by: rx.disposeBag)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

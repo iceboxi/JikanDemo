@@ -48,15 +48,6 @@ class MainViewModel: NSObject, ViewModelType {
         input.selection.asObservable()
             .map { $0.item }
             .subscribe(onNext: { model in
-                var list = UserConfigs.shared.favorates.value
-                if list.contains(where: { $0.id == model.id }) {
-                    list.removeAll(where: { $0.id == model.id })
-                } else {
-                    list.append(model)
-                }
-                
-                UserConfigs.shared.favorates.accept(list)
-                
                 self.malSelected.onNext(URL(string: "https://myanimelist.net/\(model.type)/\(model.id)")!)
             })
             .disposed(by: rx.disposeBag)
