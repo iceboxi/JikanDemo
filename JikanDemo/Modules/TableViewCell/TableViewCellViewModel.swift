@@ -28,7 +28,7 @@ class TableViewCellViewModel: NSObject {
         title.accept(anime.title)
         iconURL.accept(anime.image)
         rank.accept(anime.rank != nil ? "\(anime.rank ?? 0)" : "-")
-        date.accept("\(anime.startDate)-\(anime.endDate)")
+        date.accept("\(anime.startDate.formatted(date: .abbreviated, time: .omitted)) - \(anime.endDate.formatted(date: .abbreviated, time: .omitted))")
         favorite.accept(isFavorite)
         
         UserConfigs.shared.favorates.asDriver()

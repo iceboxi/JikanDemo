@@ -10,9 +10,23 @@ import Kingfisher
 
 class TableViewCell: UITableViewCell {
     let icon = UIImageView()
-    let title = UILabel()
-    let rank = UILabel()
-    let date = UILabel()
+    let title: UILabel = {
+        let view = UILabel()
+        view.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        view.numberOfLines = 0
+        return view
+    }()
+    let rank: UILabel = {
+        let view = UILabel()
+        view.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        return view
+    }()
+    let date: UILabel = {
+        let view = UILabel()
+        view.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        view.textColor = .gray
+        return view
+    }()
     let button = UIButton()
 
     override func awakeFromNib() {
