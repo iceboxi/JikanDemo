@@ -23,19 +23,23 @@ struct MangaList: Mappable {
     }
 }
 
-struct Manga: Mappable {
+struct Manga: MalModel {
     var id: Int
     var image: URL?
     var title: String
     var rank: Int?
     var startDate: Date
     var endDate: Date
-
+    var type: String
+    var favorite: Bool
+    
     init?(map: Map) {
         id = 0
         title = ""
         startDate = Date()
         endDate = Date()
+        type = "manga"
+        favorite = false
     }
 
     mutating func mapping(map: Map) {
@@ -45,5 +49,7 @@ struct Manga: Mappable {
         rank <- map["rank"]
         startDate <- (map["published.from"], ISO8601DateTransform())
         endDate <- (map["published.end"], ISO8601DateTransform())
+        type <- map["mal_type"]
+        favorite <- map["local_favorite"]
     }
 }

@@ -26,6 +26,8 @@ class WebViewController: UIViewController {
     }
 
     func makeUI() {
+        view.backgroundColor = .white
+        
         let config = WKWebViewConfiguration()
         config.allowsInlineMediaPlayback = true
         config.allowsPictureInPictureMediaPlayback = true

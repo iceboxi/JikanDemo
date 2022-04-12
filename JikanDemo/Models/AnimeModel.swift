@@ -23,21 +23,37 @@ struct AnimeList: Mappable {
     }
 }
 
-struct Anime: Mappable {
+protocol MalModel: Mappable {
+    var id: Int { get }
+    var image: URL? { get }
+    var title: String { get }
+    var rank: Int? { get }
+    var startDate: Date { get }
+    var endDate: Date { get }
+
+    var type: String { get }
+    var favorite: Bool { get set }
+}
+
+struct Anime: MalModel {
     var id: Int
     var image: URL?
     var title: String
     var rank: Int?
     var startDate: Date
     var endDate: Date
-
+    var type: String
+    var favorite: Bool
+    
     init?(map: Map) {
         id = 0
         title = ""
         startDate = Date()
         endDate = Date()
+        type = "anime"
+        favorite = false
     }
-
+    
     mutating func mapping(map: Map) {
         id <- map["mal_id"]
         image <- (map["images.jpg.small_image_url"], URLTransform())
@@ -45,6 +61,8 @@ struct Anime: Mappable {
         rank <- map["rank"]
         startDate <- (map["aired.from"], ISO8601DateTransform())
         endDate <- (map["aired.end"], ISO8601DateTransform())
+        type <- map["mal_type"]
+        favorite <- map["local_favorite"]
     }
 }
 

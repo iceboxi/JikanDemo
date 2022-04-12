@@ -30,6 +30,8 @@ class MainController: UIViewController {
     }
 
     func makeUI() {
+        view.backgroundColor = .white
+        
         segment.selectedSegmentIndex = 0
         view.addSubview(segment)
         segment.snp.makeConstraints { make in
