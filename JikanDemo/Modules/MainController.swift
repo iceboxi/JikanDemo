@@ -20,6 +20,8 @@ class MainController: UIViewController {
     let identify = R.reuseIdentifier.tableViewCell.identifier
     let viewModel = MainViewModel()
     
+    let footerRefreshTrigger = PublishSubject<Void>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +62,8 @@ class MainController: UIViewController {
     }
     
     func bindViewModel() {
-        let input = MainViewModel.Input(footerRefresh: Observable.just(()),
+        let refresh = Observable.of(Observable.just(()), footerRefreshTrigger).merge()
+        let input = MainViewModel.Input(footerRefresh: refresh,
                                         type: segment.rx.selectedSegmentIndex.asDriver(),
                                         selection: tableView.rx.modelSelected(TableViewCellViewModel.self).asDriver())
         let output = viewModel.transform(input: input)
@@ -69,6 +72,19 @@ class MainController: UIViewController {
             .drive(tableView.rx.items(cellIdentifier: identify, cellType: TableViewCell.self)) { _, model, cell in
                 cell.bind(to: model)
             }
+            .disposed(by: rx.disposeBag)
+        
+        tableView.rx.willDisplayCell
+            .map { $0.indexPath.item }
+            .distinctUntilChanged()
+            .withLatestFrom(output.items) { (item, list) -> Bool in
+                return item == list.count - 3
+            }
+            .subscribe(onNext: { [weak self] bool in
+                if bool {
+                    self?.footerRefreshTrigger.onNext(())
+                }
+            })
             .disposed(by: rx.disposeBag)
         
         output.navigationTitle.drive(onNext: { [weak self] title in
@@ -85,4 +101,3 @@ class MainController: UIViewController {
             .disposed(by: rx.disposeBag)
     }
 }
-
