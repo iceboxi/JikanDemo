@@ -39,6 +39,22 @@ class JikanDemoTests: XCTestCase {
             })
             .disposed(by: rx.disposeBag)
     }
+    
+    func testMalModelStorage() throws {
+        if let url = R.file.topAnimeJson(), let data = try? Data(contentsOf: url) {
+            if let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] {
+                if let list = Mapper<AnimeList>().map(JSON: json) {
+                    UserConfigs.shared.favorates.accept(list.data)
+                    let temp = UserConfigs.shared.favorates.value
+                    let others = UserDefaults.standard.stringArray(forKey: UserConfigs.Keys.favorates)
+                    XCTAssertEqual(temp.count, others?.count)
+                    return
+                }
+            }
+        }
+        
+        XCTAssert(false)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
