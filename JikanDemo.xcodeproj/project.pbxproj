@@ -196,6 +196,7 @@
 				585FEFD028029BDE00077BA9 /* AppDelegate.swift */,
 				585FEFD228029BDE00077BA9 /* SceneDelegate.swift */,
 				585FF00728029CB200077BA9 /* Modules */,
+				5884454B2804459300325D32 /* WebViewController.swift */,
 				585FF00028029C1900077BA9 /* Common */,
 				585FF00128029C2C00077BA9 /* Network */,
 				585FF00328029C3D00077BA9 /* Manager */,
@@ -290,15 +291,9 @@
 		585FF00728029CB200077BA9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				588445412803FAB300325D32 /* MainViewModel.swift */,
-				585FEFD428029BDE00077BA9 /* MainController.swift */,
-				585FEFD628029BDE00077BA9 /* Main.storyboard */,
-				588445452803FBB000325D32 /* TableViewCellViewModel.swift */,
-				5884453A280345C400325D32 /* TableViewCell.swift */,
-				5884453B280345C400325D32 /* TableViewCell.xib */,
-				5884454B2804459300325D32 /* WebViewController.swift */,
-				588445542805578D00325D32 /* FavoriteViewModel.swift */,
-				588445522805565500325D32 /* FavoriteViewController.swift */,
+				5884455628056D6300325D32 /* MainView */,
+				5884455728056D8000325D32 /* TableViewCell */,
+				5884455828056D9800325D32 /* Favorite */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -338,6 +333,35 @@
 				585FF05E2802B82F00077BA9 /* Single+ObjectMapper.swift */,
 			);
 			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		5884455628056D6300325D32 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				588445412803FAB300325D32 /* MainViewModel.swift */,
+				585FEFD428029BDE00077BA9 /* MainController.swift */,
+				585FEFD628029BDE00077BA9 /* Main.storyboard */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		5884455728056D8000325D32 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				588445452803FBB000325D32 /* TableViewCellViewModel.swift */,
+				5884453A280345C400325D32 /* TableViewCell.swift */,
+				5884453B280345C400325D32 /* TableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		5884455828056D9800325D32 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				588445542805578D00325D32 /* FavoriteViewModel.swift */,
+				588445522805565500325D32 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
